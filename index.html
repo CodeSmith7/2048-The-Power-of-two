@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="2048.css">
+    <script defer src="2048.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>2048 : The Power of Two</h1>
+        <div id="score-container">
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+    </header>
+    <main>
+        <div id="board">
+            <!-- The tiles will be created dynamically by JavaScript -->
+        </div>
+        <div id="game-over" class="hidden">
+            <h1><p>Game Over!</p></h1>
+            <button id="retry-button">Retry</button>
+        </div>
+        <div id="instructions">
+            <p>Desktop: Use <strong>W, A, S, D</strong> or arrow keys</p>
+            <p>Mobile: Swipe in the direction to mimic arrow behavior</p>
+        </div>
+        
+    </main>
+</body>
+</html>
