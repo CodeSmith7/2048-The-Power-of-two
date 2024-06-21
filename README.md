@@ -6,7 +6,7 @@
 ## Gameplay
 The game is played on a gray 4×4 grid, with numbered tiles that slide smoothly when a player moves them using the four arrow keys. Every turn, a new tile will randomly appear in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.
 
-![2048_Game](https://github.com/CodeSmith7/2048-The-Power-of-two/assets/138781677/b0dffda5-326d-4572-96bd-942b57440c42)
+![2048_Game](https://github.com/CodeSmith7/2048-The-power-of-two/assets/138781677/65eb8bb9-4082-4d7f-8ea7-40021df896c0)
 
 ## Winning The Game
 A scoreboard on the upper-right keeps track of the user’s score. The user’s score starts at zero, and is incremented whenever two tiles combine, by the value of the new tile. The game is won when a tile with a value of 2048 appears on the board, hence the name of the game. After reaching the 2048 tile, players can continue to play (beyond the 2048 tile) to reach higher scores.
