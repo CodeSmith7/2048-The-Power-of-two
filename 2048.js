@@ -19,6 +19,10 @@ function setGame() {
 }
 
 document.addEventListener('keydown', (event) => {
+    // Prevent the default action (scroll / move caret)
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+        event.preventDefault();
+    }
     handleKeyPress(event.key);
 });
 
@@ -258,5 +262,10 @@ function addTouchControls() {
             }
         }
     });
+
+    // Prevent touch move event to avoid scrolling
+    touchArea.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+    }, { passive: false });
 }
 
