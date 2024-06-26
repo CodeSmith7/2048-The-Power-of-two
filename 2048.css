@@ -9,26 +9,25 @@ body {
 
 header {
     display: flex;
-    justify-content: center; /* Aligns items horizontally to center */
-    align-items: center; /* Aligns items vertically to center */
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 44px;
     color: #131211;
-    text-align: center; /* Centers the text inside h1 */
-    margin: 0; /* Resets default margin */
+    text-align: center;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
 #score-container {
-    position: absolute;
-    top: 10px; /* Adds space from the top */
-    right: 10px; /* Adds space from the right */
     background-color: #5e4024;
     border-radius: 10px;
     padding: 10px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 
 #score-container h2 {
@@ -36,7 +35,6 @@ header h1 {
     color: #f9f6f2;
     margin: 0;
 }
-
 
 #board {
     width: 400px;
@@ -51,6 +49,7 @@ header h1 {
     grid-gap: 10px;
     box-shadow: 0 0 15px rgba(182, 87, 87, 0.2);
 }
+
 #game-over {
     position: fixed;
     top: 50%;
@@ -63,7 +62,6 @@ header h1 {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    
 }
 
 #game-over.hidden {
@@ -85,7 +83,6 @@ header h1 {
     background-color: #f5bb4e;
 }
 
-
 .tile {
     width: 90px;
     height: 90px;
@@ -96,7 +93,7 @@ header h1 {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.1s, box-shadow 0.1s, left 0.2s ease-out, top 0.2s ease-out; /* Added left and top transitions */
+    transition: transform 0.1s, box-shadow 0.1s, left 0.2s ease-out, top 0.2s ease-out;
 }
 
 .tile:hover {
@@ -170,7 +167,141 @@ header h1 {
 }
 
 p {
-    color: #776e65; /* Unchanged */
-    font-size: 30px; /* Unchanged */
+    color: #776e65;
+    font-size: 30px;
 }
 
+/* Media Queries for Responsiveness */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    #score-container {
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 10px auto;
+        padding: 5px 10px;
+    }
+
+    #score-container h2 {
+        font-size: 18px;
+    }
+
+    #board {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        grid-gap: 5px;
+    }
+
+    .tile {
+        width: 65px;
+        height: 65px;
+        font-size: 18px;
+    }
+
+    #game-over {
+        padding: 40px 80px;
+    }
+
+    #retry-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 38px;
+    }
+
+    #score-container {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+    }
+
+    #score-container h2 {
+        font-size: 22px;
+    }
+
+    #board {
+        width: 350px;
+        height: 350px;
+        padding: 15px;
+        grid-gap: 8px;
+    }
+
+    .tile {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    #game-over {
+        padding: 50px 100px;
+    }
+
+    #retry-button {
+        padding: 9px 18px;
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 901px) {
+    header h1 {
+        font-size: 44px;
+    }
+
+    #score-container {
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+    }
+
+    #score-container h2 {
+        font-size: 24px;
+    }
+
+    #board {
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        grid-gap: 10px;
+    }
+
+    .tile {
+        width: 90px;
+        height: 90px;
+        font-size: 24px;
+    }
+
+    #game-over {
+        padding: 60px 120px;
+    }
+
+    #retry-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+}
